@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/rec">
+        <file>img/icons8-add-48.png</file>
+        <file>img/icons8-delete-48.png</file>
+        <file>img/icons8-libre-office-suite-48.png</file>
+        <file>img/icons8-save-48.png</file>
+        <file>img/icons8-trash-can-48.png</file>
+    </qresource>
+</RCC>
