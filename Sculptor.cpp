@@ -93,26 +93,20 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
 
 void Sculptor::putSphere(int _xcenter, int _ycenter, int _zcenter, int _radius){
     // ADICIONANDO ESFERA
-    xcenter = _xcenter;
-    ycenter = _ycenter;
-    zcenter = _zcenter;
-    radius = _radius;
-    double r=radius/2.0;
-    double dist;
-    for(i=0; i<(2*xcenter); i++){
-        for(j=0; j<(2*ycenter); j++){
-            for(k=0; k<(2*zcenter); k++){
-                //Equação da esfera.
-                dist = (i-xcenter/2.0) * (i-xcenter/2.0 ) / (r*r) +
-                       (j-ycenter/2.0) * (j-ycenter/2.0) / (r*r) +
-                       (k-zcenter/2.0) * (k-zcenter/2.0 ) / (r*r);
-                if(dist<=1.0){
-                    putVoxel(i,j,k);
-                }
-            }
+    double d;
+        for(int i = 0; i < nx; i++){
+            for(int j = 0; j < ny; j++){
+                for(int k = 0; k < nz; k++){
+                    d = pow(i - _xcenter,2) + pow(j - _ycenter,2) + pow(k - _zcenter,2);
+                    if (d <= pow(_radius,2)){
+                        putVoxel(i,j,k);
+                    }
+                 }
+             }
         }
-    }
 }
+
+
 
 void Sculptor::outSphere(int _xcenter, int _ycenter, int _zcenter, int _radius){
     // REMOVENDO O EXTERIOR DE UMA ESFERA
@@ -140,25 +134,17 @@ void Sculptor::outSphere(int _xcenter, int _ycenter, int _zcenter, int _radius){
 }
 
 
-void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
+void Sculptor::cutSphere(int _xcenter, int _ycenter, int _zcenter, int radius){
     // REMOVENDO UMA ESFERA
-    this->xcenter=xcenter;
-    this->ycenter=ycenter;
-    this->zcenter=zcenter;
-    this->radius=radius;
-    double rd=radius/2.0;
-    double dist;
-    for(i=0; i<(2*xcenter); i++){
-        for(j=0; j<(2*ycenter); j++){
-            for(k=0; k<(2*zcenter); k++){
-                //Equação da esfera.
-                dist = (i-xcenter/2.0) * (i-xcenter/2.0 ) / (rd*rd) +
-                       (j-ycenter/2.0) * (j-ycenter/2.0) / (rd*rd) +
-                       (k-zcenter/2.0) * (k-zcenter/2.0 ) / (rd*rd);
-                if(dist<=1.0){
-                    cutVoxel(i,j,k);;
+    double d;
+    for(int i = 0; i < nx; i++){
+        for(int j = 0; j < ny; j++){
+            for(int k = 0; k < nz; k++){
+                d = pow(i - _xcenter,2) + pow(j - _ycenter,2) + pow(k - _zcenter,2);
+                if (d <= pow(radius,2)){
+                    cutVoxel(i,j,k);
                 }
-            }
+             }
         }
     }
 }

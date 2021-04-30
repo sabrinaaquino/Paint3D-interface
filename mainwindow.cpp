@@ -25,6 +25,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->horizontalSliderDimX->setMaximum(dimX-1);
     ui->horizontalSliderDimY->setMaximum(dimY-1);
     ui->horizontalSliderDimZ->setMaximum(dimZ-1);
+    ui->horizontalSliderBoxX->setMaximum(dimX-1);
+    ui->horizontalSliderBoxY->setMaximum(dimY-1);
+    ui->horizontalSliderBoxZ->setMaximum(dimZ-1);
+    ui->horizontalSliderERx->setMaximum(dimX-1);
+    ui->horizontalSliderERy->setMaximum(dimY-1);
+    ui->horizontalSliderERz->setMaximum(dimZ-1);
+    ui->horizontalSliderRaio->setMaximum(dimX-1);
     ui->widget->loadMatriz(sculptor->getPlano(ui->horizontalSliderDimZ->value(),XY));
     actionGroup = new QActionGroup(this);
     actionGroup->addAction(ui->actionBox);
@@ -65,9 +72,6 @@ void MainWindow::openDialog()
         dimY = d.dimYDialog().toInt();
         dimZ = d.dimZDialog().toInt();
         qDebug() << dimX << dimY << dimZ;
-        ui->horizontalSliderDimX->setMaximum(dimX-1);
-        ui->horizontalSliderDimY->setMaximum(dimY-1);
-        ui->horizontalSliderDimZ->setMaximum(dimZ-1);
     }
 
 
@@ -148,8 +152,8 @@ void MainWindow::drawShape(int hClick, int vClick)
 
 void MainWindow::updateCoord(int hClick, int vClick)
 {
-    ui->horizontalSliderDimX->setValue(vClick);
-    ui->horizontalSliderDimY->setValue(hClick);
+    ui->horizontalSliderDimX->setValue(hClick);
+    ui->horizontalSliderDimY->setValue(vClick);
 }
 
 

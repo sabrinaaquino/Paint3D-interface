@@ -13,7 +13,7 @@
 plotter::plotter(QWidget *parent) : QWidget(parent)
 {
     nl = 10;
-    nc = 10;
+    nc = 20;
     Sculptor(nl,nc,10);
     pressed = false;
     widthScr = rect().width();
@@ -58,12 +58,13 @@ void plotter::paintEvent(QPaintEvent *event)
         dimCell = heightCell;
     }
     borderh = (widthScr - nc*dimCell)/2;
+    //borderh = borderh/10
     borderv = (heightScr - nl*dimCell)/2;
     gradient.setRadius(dimCell);
     gradient.setFocalPoint(-0.15*dimCell, -0.15*dimCell);
     gradient.setCenter(-0.15*dimCell, -0.15*dimCell);
     painter.setPen(pen);
-    //painter.drawRect(rect());
+    painter.drawRect(rect());
     qDebug() << nl << nc << v.size() << v[0].size();
 
     for(uint i = 0; i < v.size(); i++){
@@ -82,7 +83,7 @@ void plotter::paintEvent(QPaintEvent *event)
             }else{
                 brush.setColor(QColor(255,255,255,0));
                 painter.setBrush(brush);
-                painter.drawRect(j*dimCell+borderh,i*dimCell+borderv,dimCell, dimCell);
+                //painter.drawRect(j*dimCell+borderh,i*dimCell+borderv,dimCell, dimCell);
             }
         }
     }

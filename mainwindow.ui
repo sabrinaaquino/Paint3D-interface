@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>764</width>
-    <height>644</height>
+    <width>766</width>
+    <height>678</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>10</x>
       <y>160</y>
-      <width>741</width>
-      <height>401</height>
+      <width>740</width>
+      <height>441</height>
      </rect>
     </property>
    </widget>
@@ -34,6 +34,216 @@
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_8">
+     <item row="0" column="1">
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="4" alignment="Qt::AlignHCenter">
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>ELLIPSOID</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2" alignment="Qt::AlignHCenter">
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>BOX</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="pushButtonColor">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="6">
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="1" column="2">
+            <widget class="QLCDNumber" name="lcdNumber_5"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>B</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSlider" name="horizontalSliderR">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSlider" name="horizontalSliderG">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLCDNumber" name="lcdNumber_6"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>G</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>R</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLCDNumber" name="lcdNumber_4"/>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSlider" name="horizontalSliderB">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="2">
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>RX</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSlider" name="horizontalSliderERx">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2" colspan="2">
+            <widget class="QLCDNumber" name="lcdNumber_8"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>RY</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" colspan="2">
+            <widget class="QSlider" name="horizontalSliderERy">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLCDNumber" name="lcdNumber_9"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>RZ</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" colspan="2">
+            <widget class="QSlider" name="horizontalSliderERz">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLCDNumber" name="lcdNumber_10"/>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="1">
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>X</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSlider" name="horizontalSliderBoxX">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLCDNumber" name="lcdNumber_11"/>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSlider" name="horizontalSliderBoxY">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Z</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSlider" name="horizontalSliderBoxZ">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLCDNumber" name="lcdNumber_12"/>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLCDNumber" name="lcdNumber_13"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>Y</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="pushButtonChooseColor">
+         <property name="text">
+          <string>Cor</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
      <item row="0" column="0">
       <layout class="QFormLayout" name="formLayout">
        <item row="0" column="0">
@@ -114,216 +324,6 @@
        </item>
       </layout>
      </item>
-     <item row="0" column="1">
-      <layout class="QGridLayout" name="gridLayout_5">
-       <item row="0" column="0">
-        <widget class="QPushButton" name="pushButtonChooseColor">
-         <property name="text">
-          <string>Cor</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="4" alignment="Qt::AlignHCenter">
-        <widget class="QLabel" name="label_11">
-         <property name="text">
-          <string>ELLIPSOID</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QPushButton" name="pushButtonColor">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0" colspan="6">
-        <layout class="QGridLayout" name="gridLayout_3">
-         <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout">
-           <item row="2" column="2">
-            <widget class="QLCDNumber" name="lcdNumber_6"/>
-           </item>
-           <item row="0" column="2">
-            <widget class="QLCDNumber" name="lcdNumber_4"/>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_5">
-             <property name="text">
-              <string>G</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2">
-            <widget class="QLCDNumber" name="lcdNumber_5"/>
-           </item>
-           <item row="1" column="1">
-            <widget class="QSlider" name="horizontalSliderG">
-             <property name="maximum">
-              <number>255</number>
-             </property>
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_6">
-             <property name="text">
-              <string>B</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_4">
-             <property name="text">
-              <string>R</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QSlider" name="horizontalSliderB">
-             <property name="maximum">
-              <number>255</number>
-             </property>
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QSlider" name="horizontalSliderR">
-             <property name="maximum">
-              <number>255</number>
-             </property>
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item row="0" column="1">
-          <layout class="QGridLayout" name="gridLayout_2">
-           <item row="1" column="2">
-            <widget class="QLCDNumber" name="lcdNumber_12"/>
-           </item>
-           <item row="2" column="2">
-            <widget class="QLCDNumber" name="lcdNumber_13"/>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_14">
-             <property name="text">
-              <string>Z</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2">
-            <widget class="QLCDNumber" name="lcdNumber_11"/>
-           </item>
-           <item row="2" column="1">
-            <widget class="QSlider" name="horizontalSliderBoxZ">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QSlider" name="horizontalSliderBoxY">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_12">
-             <property name="text">
-              <string>X</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_13">
-             <property name="text">
-              <string>Y</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QSlider" name="horizontalSliderBoxX">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item row="0" column="2">
-          <layout class="QGridLayout" name="gridLayout_4">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_8">
-             <property name="text">
-              <string>RX</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QSlider" name="horizontalSliderERx">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2" colspan="2">
-            <widget class="QLCDNumber" name="lcdNumber_8"/>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_9">
-             <property name="text">
-              <string>RY</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1" colspan="2">
-            <widget class="QSlider" name="horizontalSliderERy">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="QLCDNumber" name="lcdNumber_9"/>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_10">
-             <property name="text">
-              <string>RZ</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1" colspan="2">
-            <widget class="QSlider" name="horizontalSliderERz">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3">
-            <widget class="QLCDNumber" name="lcdNumber_10"/>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </item>
-       <item row="0" column="2" alignment="Qt::AlignHCenter">
-        <widget class="QLabel" name="label_15">
-         <property name="text">
-          <string>BOX</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
     </layout>
    </widget>
   </widget>
@@ -332,7 +332,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>764</width>
+     <width>766</width>
      <height>21</height>
     </rect>
    </property>
@@ -380,15 +380,16 @@
    <addaction name="actionNew"/>
    <addaction name="actionSave"/>
    <addaction name="actionVoxel"/>
+   <addaction name="actionVoxel_cut"/>
    <addaction name="actionBox"/>
+   <addaction name="actionBox_cut"/>
    <addaction name="actionSphere"/>
+   <addaction name="actionSphere_cut"/>
    <addaction name="actionEllipsoid"/>
+   <addaction name="actionEllipsoid_cut"/>
    <addaction name="actionExit"/>
   </widget>
   <action name="actionSave">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
    <property name="icon">
     <iconset resource="Resources.qrc">
      <normaloff>:/rec/img/icons8-save-48.png</normaloff>:/rec/img/icons8-save-48.png</iconset>
@@ -418,10 +419,13 @@
    </property>
    <property name="icon">
     <iconset resource="Resources.qrc">
-     <normaloff>:/rec/img/141-1419358_transparent-sugar-cube-png-sugar-cubes-clipart-png - Copy.png</normaloff>:/rec/img/141-1419358_transparent-sugar-cube-png-sugar-cubes-clipart-png - Copy.png</iconset>
+     <normaloff>:/rec/img/CUBOS.png</normaloff>:/rec/img/CUBOS.png</iconset>
    </property>
    <property name="text">
     <string>Voxel</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
    </property>
   </action>
   <action name="actionBox">
@@ -430,10 +434,13 @@
    </property>
    <property name="icon">
     <iconset resource="Resources.qrc">
-     <normaloff>:/rec/img/png-transparent-cube-transparency-and-translucency-sugar-cubes-angle-rectangle-sugar-cubes.png</normaloff>:/rec/img/png-transparent-cube-transparency-and-translucency-sugar-cubes-angle-rectangle-sugar-cubes.png</iconset>
+     <normaloff>:/rec/img/CUBO.png</normaloff>:/rec/img/CUBO.png</iconset>
    </property>
    <property name="text">
     <string>Box</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
    </property>
   </action>
   <action name="actionSphere">
@@ -442,52 +449,73 @@
    </property>
    <property name="icon">
     <iconset resource="Resources.qrc">
-     <normaloff>:/rec/img/660-6604207_sphere-d-png-sphere-3d-png-transparent-png - Copy.png</normaloff>:/rec/img/660-6604207_sphere-d-png-sphere-3d-png-transparent-png - Copy.png</iconset>
+     <normaloff>:/rec/img/ESFERA.png</normaloff>:/rec/img/ESFERA.png</iconset>
    </property>
    <property name="text">
     <string>Sphere</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
   </action>
   <action name="actionEllipsoid">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="Resources.qrc">
-     <normaloff>:/rec/img/200px-PartDesign_AdditiveEllipsoid_example - Copy.png</normaloff>:/rec/img/200px-PartDesign_AdditiveEllipsoid_example - Copy.png</iconset>
+     <normaloff>:/rec/img/ELIPSE.png</normaloff>:/rec/img/ELIPSE.png</iconset>
    </property>
    <property name="text">
     <string>Ellipsoid</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
   </action>
   <action name="actionVoxel_cut">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="Resources.qrc">
-     <normaloff>:/rec/img/icons8-trash-can-48.png</normaloff>:/rec/img/icons8-trash-can-48.png</iconset>
+     <normaloff>:/rec/img/CUBOS COM X.png</normaloff>:/rec/img/CUBOS COM X.png</iconset>
    </property>
    <property name="text">
     <string>Voxel</string>
    </property>
   </action>
   <action name="actionBox_cut">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="Resources.qrc">
-     <normaloff>:/rec/img/icons8-trash-can-48.png</normaloff>:/rec/img/icons8-trash-can-48.png</iconset>
+     <normaloff>:/rec/img/CUBO COM X.png</normaloff>:/rec/img/CUBO COM X.png</iconset>
    </property>
    <property name="text">
     <string>Box</string>
    </property>
   </action>
   <action name="actionSphere_cut">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="Resources.qrc">
-     <normaloff>:/rec/img/icons8-trash-can-48.png</normaloff>:/rec/img/icons8-trash-can-48.png</iconset>
+     <normaloff>:/rec/img/ESFERA COM X.png</normaloff>:/rec/img/ESFERA COM X.png</iconset>
    </property>
    <property name="text">
     <string>Sphere</string>
    </property>
   </action>
   <action name="actionEllipsoid_cut">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="Resources.qrc">
-     <normaloff>:/rec/img/icons8-trash-can-48.png</normaloff>:/rec/img/icons8-trash-can-48.png</iconset>
+     <normaloff>:/rec/img/ELIPSE COM X.png</normaloff>:/rec/img/ELIPSE COM X.png</iconset>
    </property>
    <property name="text">
     <string>Ellipsoid</string>
