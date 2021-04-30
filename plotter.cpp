@@ -64,11 +64,12 @@ void plotter::paintEvent(QPaintEvent *event)
     gradient.setFocalPoint(-0.15*dimCell, -0.15*dimCell);
     gradient.setCenter(-0.15*dimCell, -0.15*dimCell);
     painter.setPen(pen);
-    painter.drawRect(rect());
+    painter.drawRect(borderh,borderv,nc*dimCell,nl*dimCell);
+
     qDebug() << nl << nc << v.size() << v[0].size();
 
     for(uint i = 0; i < v.size(); i++){
-        for(uint j = 0; j < v[i].size(); j++){
+        for(uint j = 0; j < (v[i].size()); j++){
             if(v[i][j].is0n == true){
                 painter.save();
                 painter.translate(j*dimCell+borderh+dimCell/2,i*dimCell+borderv+dimCell/2);
