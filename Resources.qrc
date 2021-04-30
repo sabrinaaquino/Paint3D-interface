@@ -1,9 +1,13 @@
 <RCC>
     <qresource prefix="/rec">
-        <file>img/icons8-add-48.png</file>
-        <file>img/icons8-delete-48.png</file>
         <file>img/icons8-libre-office-suite-48.png</file>
         <file>img/icons8-save-48.png</file>
         <file>img/icons8-trash-can-48.png</file>
+        <file>img/icons8-undelete-48.png</file>
+        <file>img/png-transparent-cube-transparency-and-translucency-sugar-cubes-angle-rectangle-sugar-cubes.png</file>
+        <file>img/141-1419358_transparent-sugar-cube-png-sugar-cubes-clipart-png - Copy.png</file>
+        <file>img/200px-PartDesign_AdditiveEllipsoid_example - Copy.png</file>
+        <file>img/660-6604207_sphere-d-png-sphere-3d-png-transparent-png - Copy.png</file>
+        <file>img/icons8-add-48.png</file>
     </qresource>
 </RCC>

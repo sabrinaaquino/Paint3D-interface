@@ -140,10 +140,11 @@ class Sculptor
         * @brief Cria um elipsoide nas coordenandas indicadas.
         */
         void putEllipsoid(int _xcenter, int _ycenter, int _zcenter, float _rx, float _ry, float _rz); //Creates a ellipsoid
-        vector< vector<Voxel> > getPlano(int i, int plano=XY);
         /**
         * @brief Deleta um elipsoide nas coordenandas indicadas.
         */
         void cutEllipsoid(int _xcenter, int _ycenter, int _zcenter, float _rx, float _ry, float _rz); //Deletes a ellipsoid
+
+        vector< vector<Voxel> > getPlano(int i, int plano=XY);
 };
 #endif

@@ -37,10 +37,6 @@ public slots:
     void setRx(int rx_);
     void setRy(int ry_);
     void setRz(int rz_);
-    void setColor_r(int r_);
-    void setColor_g(int g_);
-    void setColor_b(int b_);
-    void setColor_a(int a_);
     void setDimx(int dimx_);
     void setDimy(int dimy_);
     void setDimz(int dimz_);

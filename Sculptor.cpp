@@ -265,7 +265,7 @@ void Sculptor::writeOFF(string filename){
     for(x=0;x<nx;x++){
         for(y=0;y<ny;y++){
             for(z=0;z<nz;z++){
-                if((v[x][y][z].is0n == true)){
+                if(v[x][y][z].is0n == true){
                     f << x-lado << " " << y+lado << " " << z-lado << "\n"
                     << x-lado << " " << y-lado << " " << z-lado << "\n"
                     << x+lado << " " << y-lado << " " << z-lado << "\n"
@@ -282,7 +282,7 @@ void Sculptor::writeOFF(string filename){
      for(int x=0;x<nx;x++){
         for(int y=0;y<ny;y++){
             for(int z=0;z<nz;z++){
-                if((v[x][y][z].is0n==true)){
+                if(v[x][y][z].is0n==true){
                     f << 4 << " " << 0+faces << " " << 3+faces << " " << 2+faces << " " << 1+faces << " "
                     << v[x][y][z].r << " " << v[x][y][z].g << " " << v[x][y][z].b << " " << v[x][y][z].a << endl
                     << 4 << " " << 4+faces << " " << 5+faces << " " << 6+faces << " " << 7+faces<< " "
@@ -303,12 +303,12 @@ void Sculptor::writeOFF(string filename){
 
     total=0;
     f.close();
-    std::string file;
+    /*std::string file;
     std::ifstream MyReadFile("Vida.off");
     while (getline (MyReadFile, file)) {
     std::cout << file;
     }
-    MyReadFile.close();
+    MyReadFile.close();*/
 }
 
 vector<vector<Voxel> > Sculptor::getPlano(int i, int plano)

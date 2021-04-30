@@ -39,9 +39,9 @@ public slots:
     void save();
     void openDialog(void);
     void drawShape(int, int);
+    void updateCoord(int, int);
 
 private slots:
-    void on_action_Voxel_triggered();
     void on_action_Voxel_cut_triggered();
     void on_action_Box_triggered();
     void on_action_Box_cut_triggered();
@@ -52,5 +52,7 @@ private slots:
     void on_actionSave_triggered();
     void on_actionNew_triggered();
     void on_actionExit_triggered();
+    void on_horizontalSliderDimZ_valueChanged(int value);
+    void on_actionVoxel_triggered();
 };
 #endif // MAINWINDOW_H

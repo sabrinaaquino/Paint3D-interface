@@ -5,13 +5,22 @@
 #include <QDebug>
 #include <QString>
 #include <QFileDialog>
+#include <QPixmap>
+#include "cutBox.h"
+#include "cutEllipsoid.h"
+#include "cutSphere.h"
+#include "cutVoxel.h"
+#include "putBox.h"
+#include "putEllipsoid.h"
+#include "putSphere.h"
+#include "putVoxel.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    dimX = 10; dimY = 10; dimZ = 10;
+    dimX = 30; dimY = 30; dimZ = 30;
     sculptor = new Sculptor(dimX,dimY,dimZ);
     ui->horizontalSliderDimX->setMaximum(dimX-1);
     ui->horizontalSliderDimY->setMaximum(dimY-1);
@@ -26,11 +35,7 @@ MainWindow::MainWindow(QWidget *parent)
     actionGroup->addAction(ui->actionSphere_cut);
     actionGroup->addAction(ui->actionVoxel);
     actionGroup->addAction(ui->actionVoxel_cut);
-    ui->actionVoxel->setChecked(true);
-    connect(ui->pushButtonOpenDialog,
-            SIGNAL(clicked()),
-            this,
-            SLOT(openDialog()));
+
 }
 
 MainWindow::~MainWindow()
@@ -141,8 +146,14 @@ void MainWindow::drawShape(int hClick, int vClick)
     }
 }
 
+void MainWindow::updateCoord(int hClick, int vClick)
+{
+    ui->horizontalSliderDimX->setValue(vClick);
+    ui->horizontalSliderDimY->setValue(hClick);
+}
 
-void MainWindow::on_action_Voxel_triggered()
+
+void MainWindow::on_actionVoxel_triggered()
 {
     currentObject = PUTVOXEL;
 }
@@ -204,7 +215,7 @@ void MainWindow::on_actionSave_triggered()
     if(filename.isNull()){
         return;
     }
-    sculptor->writeOFF(filename.toStdString().c_str());
+    sculptor->writeOFF(filename.toStdString());
 }
 
 void MainWindow::on_actionNew_triggered()
@@ -219,7 +230,6 @@ void MainWindow::on_actionNew_triggered()
         if(sculptor != NULL)
            delete sculptor;
         sculptor = new Sculptor(dimX,dimY,dimZ);
-        //ui->actionXY->trigger();
         ui->horizontalSliderDimX->setMaximum(dimX-1);
         ui->horizontalSliderDimY->setMaximum(dimY-1);
         ui->horizontalSliderDimZ->setMaximum(dimZ-1);
@@ -229,4 +239,9 @@ void MainWindow::on_actionNew_triggered()
 void MainWindow::on_actionExit_triggered()
 {
     exit(0);
+}
+
+void MainWindow::on_horizontalSliderDimZ_valueChanged(int value)
+{
+    ui->widget->loadMatriz(sculptor->getPlano(value,XY));
 }

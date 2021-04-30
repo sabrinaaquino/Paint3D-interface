@@ -8,6 +8,7 @@
 #include "Sculptor.h"
 #include <QPoint>
 #include <QSize>
+#include <qdebug.h>
 
 plotter::plotter(QWidget *parent) : QWidget(parent)
 {
@@ -62,7 +63,8 @@ void plotter::paintEvent(QPaintEvent *event)
     gradient.setFocalPoint(-0.15*dimCell, -0.15*dimCell);
     gradient.setCenter(-0.15*dimCell, -0.15*dimCell);
     painter.setPen(pen);
-    painter.drawRect(rect());
+    //painter.drawRect(rect());
+    qDebug() << nl << nc << v.size() << v[0].size();
 
     for(uint i = 0; i < v.size(); i++){
         for(uint j = 0; j < v[i].size(); j++){
@@ -75,12 +77,12 @@ void plotter::paintEvent(QPaintEvent *event)
                 gradient.setColorAt(0.3, color);
                 gradient.setColorAt(1, color.darker());
                 painter.setBrush(gradient);
-                painter.drawEllipse(-dimCell/2+1, -dimCell/2+1, dimCell-1, dimCell-1);
+                painter.drawRect(-dimCell/2+1, -dimCell/2+1, dimCell, dimCell);
                 painter.restore();
             }else{
                 brush.setColor(QColor(255,255,255,0));
                 painter.setBrush(brush);
-                painter.drawRect(j*dimCell+borderh/2,i*dimCell+borderv,dimCell*10, dimCell);
+                painter.drawRect(j*dimCell+borderh,i*dimCell+borderv,dimCell, dimCell);
             }
         }
     }
@@ -128,29 +130,6 @@ void plotter::setRz(int rz_)
     repaint();
 }
 
-void plotter::setColor_r(int _r)
-{
-    r = _r/10.0;
-}
-
-void plotter::setColor_g(int _g)
-{
-    g = _g/10.0;
-    repaint();
-}
-
-void plotter::setColor_b(int _b)
-{
-    b = _b/10.0;
-    repaint();
-}
-
-void plotter::setColor_a(int _a)
-{
-    a = _a/10.0;
-    repaint();
-}
-
 void plotter::setDimx(int dimx_)
 {
     dimx = dimx_;
@@ -195,6 +174,7 @@ void plotter::mouseMoveEvent(QMouseEvent *event)
     int posh, posv;
     QRect ret;
     ret = rect();
+    ret.adjust(borderh, borderv, -borderh, -borderv);
     if(ret.contains(event->pos())&& pressed == true){
         posh = (event->pos().x()-borderh)*nc/ret.width();
         posv = (event->pos().y()-borderv)*nl/ret.height();
