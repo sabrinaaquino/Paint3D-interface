@@ -1,10 +1,9 @@
 # Interface-Sculptor
 
-Bem Vindo ao Paint3D!
+Interface of a 3DPaint made using Qt Creator and C++.
 
-Para começar, crie um novo arquivo com as dimensões que deseja;
-Depois disso escolha entre as formas geometricas disponíveis para criar as mais diversas esculturas;
-Não se esqueça de que quando selecionar a forma desejada, deve especificar também as suas dimenções e cores!
-Mãos à obra!
+To get started, create a new file with the dimensions you want;
+After that, choose from the available geometric shapes to create the most diverse sculptures;
+Don't forget that when you select the shape you want, you must also specify its dimensions and colors.
 
-Obs.: Feito em: Qt Creator 4.14.2
+Made with Qt Creator 4.14.2
